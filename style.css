@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Mada:wght@200..900&display=swap');
+
+:root
+{
+    --margin: 20px;
+    --padding-btn: 5px 25px;
+    --mada: "Mada", sans-serif;
+    --chango: "Changa", sans-serif;
+    --main-color: #4379F2;
+    --color-heading: #161616;
+
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 16px;
+}
+
+
+.navbar
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--margin);
+    background-color: #eef2fe;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999    ;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+.navbar h1 a
+{
+    text-decoration: none;
+}
+
+.navbar h1 .raqmana-rest
+{
+    color: var(--main-color);
+}
+
+
+.navbar h1 .raqmana-raa
+{
+    color: green;
+}
+
+.navbar h1:hover .raqmana-raa
+{
+    color: var(--main-color);
+}
+
+.navbar h1:hover .raqmana-rest
+{
+    color: green;
+}
+
+.navbar h1
+{
+    font-family: "Mada", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3em;
+    color: var(--main-color);
+    padding: 25px 5px;
+    border-radius: 7px;
+
+}
+
+.navbar ul
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+    list-style: none;
+    font-family: var(--chango);
+}
+
+.navbar ul a
+{
+    color: rgb(46, 44, 44);
+    text-decoration: none;
+    font-size: 1.1em;
+    position: relative;
+}
+
+.navbar ul button
+{
+    padding: var(--padding-btn);
+    font-size: 1.1em;
+    font-family: var(--chango);
+    font-weight: 700;
+    outline: none;
+    background: linear-gradient(90deg, var(--c1, #00bdff), var(--c2, #007aff) 50%, var(--c1, #00bdff)) var(--x, 0) / 200%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    color: whitesmoke;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.navbar ul button::before
+{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--c1, #027e31), var(--c2, #16dd48) 50%, var(--c1, #47dd8a)) var(--x, 0) / 200%;
+    transition: 0.4s ease;
+    z-index: -1;    
+}
+
+.navbar ul button:hover::before
+{
+    width: 100%;
+}
+
+.navbar ul a::before
+{
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.4s ease;
+}
+.navbar ul a:hover::before
+{
+    width: 65%;
+    color: black;
+}
+
+.welcome
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+}
+
+.welcome img
+{
+    min-width: 200px;
+}
+
+.welcome .content
+{
+    font-family: var(--chango);
+    margin: var(--margin);
+    width: 50%;
+    color: white;
+}
+
+.welcome .content h2
+{
+    font-size: 2.2em;
+    color: #161616;
+    font-family: var(--mada);
+}
+
+.welcome .content p
+{
+    color: whitesmoke;
+    font-weight: 600;
+    line-height: 2.1em;
+}
+
+.features
+{
+    height: 100vh;
+}
+
+.features .f-title
+{
+    margin-top: 80px;
+    text-align: center;
+}
+.features .f-title p    
+{
+    font-weight: 600;
+    color: #444444;
+    font-size: 1.4em;
+    font-family: var(--chango);
+}
+
+.features .f-title p span
+{
+    font-size: 1.2em;
+    color: transparent;
+    -webkit-background-clip: text !important;
+    background: -webkit-linear-gradient(90deg, #832af0, #053da5 50%);
+}
+
+.features .f-title h2
+{
+    font-size: 3em;
+    font-family: var(--mada);
+    color: #161616;
+}
+
+.features .feature-content 
+{
+    margin-top: 2em;
+    position: relative;
+}
+
+
+.features .feature-content .container
+{
+    display: flex;
+    justify-content: center;
+}
+
+.features .feature-content .container img
+{
+    position: absolute;
+
+}
+
+.features .feature-content .container .circle
+{
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-image: linear-gradient(#fff, #feec69 0%, #fb9f4b 28%, #c1b1ff 62%, #a2e2fe);
+    position: absolute;
+    filter: blur(93px);
+    opacity: 0.7;
+}
+
+.features .feature-content .card
+{
+    width: 20%;
+    text-align: center;
+    background-color: #007aff;
+    padding: 37px 30px 25px 30px;
+    color: white;
+    position: absolute;
+    background: -webkit-linear-gradient(0deg, #51e6ed, #36d0f9 50%);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(54, 208, 249, 0.5);
+    max-width: 300px;
+    width: 100%;
+    font-family: var(--chango);
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.8s ease;
+}
+
+.features .feature-content .card-digital
+{
+    top: 70px;
+    left: 10%;
+}
+
+.card-container
+{
+    height: 80vh;
+}
+
+.features .feature-content .card-digital::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    transition: 0.8s ease;
+    z-index: -1;
+}
+
+.features .feature-content .card-digital:hover::before
+{
+    height: 100%;
+    background-color: white;
+    
+}
+
+.features .feature-content .card-web
+{
+    top: 10px;
+    right: 10%;  
+    background: -webkit-linear-gradient(0deg, #862ff1, #083ca7 50%);
+    box-shadow: 0 10px 20px rgba(35, 22, 211, 0.5);
+}
+
+.features .feature-content .card-web::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    transition: 0.8s ease;
+    z-index: -1;
+}
+
+
+.features .feature-content .card-web:hover::before
+{
+    height: 100%;
+    background-color: white;
+    
+}
+
+.features .feature-content .card-software
+{
+    top: 50%;
+    right: 15%;  
+    background: -webkit-linear-gradient(0deg, #fcb731, #f67526 50%);
+    box-shadow: 0 10px 20px rgba(218, 119, 6, 0.5);
+}
+
+.features .feature-content .card-software::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    transition: 0.8s ease;
+    z-index: -1;
+}
+
+
+.features .feature-content .card-software:hover::before
+{
+    height: 100%;
+    background-color: white;
+    
+}
+
+
+.features .feature-content .card-click
+{
+    top: 50%;
+    left: 15%;  
+    background: -webkit-linear-gradient(0deg, #fe6f7b, #fa5b9d 50%);
+    box-shadow: 0 10px 20px rgba(250, 91, 157, 0.5);
+}
+
+.features .feature-content .card-click::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    transition: 0.8s ease;
+    z-index: -1;
+}
+
+
+.features .feature-content .card-click:hover::before
+{
+    height: 100%;
+    background-color: white;
+    
+}
+
+
+
+.features .feature-content .card:hover
+{
+
+    color: black;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+.features .feature-content .card h3
+{
+    font-size: 1.5em;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.features .feature-content .card h3:hover
+{
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+
+
+.details .web-details
+{
+    position: relative;
+}
+
+.details .web-details .web-details-text
+{
+    text-align: center;
+}
+
+.details .web-details .web-details-text h1
+{
+    color: var(--color-heading);
+    font-size: 3.5em;
+    font-family: var(--mada);
+    width: 60%;
+    margin: 0 auto;
+}
+
+.details .web-details .web-details-text p
+{
+    font-size: 1.5em;
+    color: #444444;
+    width: 60%;
+    margin: 0px auto;
+    line-height: 1.6em;
+    font-family: var(--chango);
+}
+
+.details .web-details .web-details-text img
+{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+}
+
+
+.details .web-details .web-details-service
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+}
+
+.details .web-details .web-details-service img
+{
+    width: 20%;
+}
+
+
+.details .web-details .web-details-service .card-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+.details .web-details .web-details-service .card
+{
+    width: 20%;
+    text-align: center;
+    background-color: var(--main-color);
+    padding: 25px;
+    color: white;
+    border-radius: 10px;
+    transition: 0.4s ease;
+}
+
+.details .web-details .web-details-service .card:hover
+{
+    box-shadow: 0 10px 20px rgba(54, 208, 249, 0.5);
+    transform: scale(1.1);
+
+}
+.details .web-details .web-details-service .card h2
+{
+    font-family: var(--mada);
+    font-size: 1.8em;
+    color: var(--color-heading);
+}
+
+.details .web-details .web-details-service .card p
+{
+    font-family: var(--chango);
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.details .web-details .marketing-details .container
+{
+    display: flex;
+    justify-content: center;
+    background-color: #ebedf054;
+}
+
+.details .web-details .marketing-details .container .content
+{
+    width: 45%;
+    margin-top: 50px;;
+}
+
+
+.details .web-details .marketing-details .container .content .col
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.details .web-details .marketing-details .container .content .card
+{
+    width: 30%;
+    text-align: center;
+    background-color: white;
+    padding: 50px 30px;
+    color: #444444;
+    box-shadow: 0 10px 20px rgba(99, 104, 105, 0.5);
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-family: var(--chango);
+    border: 1px solid transparent;
+    transition: 0.4s ease;
+
+}
+
+.details .web-details .marketing-details .container .content .card:hover
+{
+    box-shadow: 0 0 0 0;
+    border: 1px solid black;
+}
+
+.details .web-details .marketing-details .container p
+
+{
+    color: #444444;
+    font-family: var(--chango);
+    font-size: 1.2em;
+}
+
+
+.details .web-details .marketing-details .container h2
+{
+    color: var(--color-heading);
+    font-family: var(--mada);
+    font-size: 3.5em;
+
+}
+
+.get-contact
+{
+    margin-top: 15px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20vh;
+    color: white;
+}
+
+
+.get-contact h4
+{
+    font-size: 1.3em;
+    font-family: var(--chango);
+    color: var(--color-heading);
+}
+
+.get-contact h2
+{
+    font-size: 2.5em;
+    font-family: var(--mada);
+    margin: 15px 0;
+}
+
+.get-contact button
+{
+    padding: var(--padding-btn);
+    font-size: 1.1em;
+    font-family: var(--chango);
+    font-weight: 700;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    color: whitesmoke;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid green;
+}
+
+.get-contact button::before
+{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--c1, #027e31), var(--c2, #16dd48) 50%, var(--c1, #47dd8a)) var(--x, 0) / 200%;
+    transition: 0.4s ease;
+    z-index: -1;    
+}
+
+.get-contact button:hover::before
+{
+    width: 100%;
+}
